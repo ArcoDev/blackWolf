@@ -52,7 +52,7 @@
                   <td><?php echo $producto['nombre'] ?></td>
                   <td><?php echo $producto['precio'] ?></td>
                   <td><?php echo $producto['nombre_cat'] ?></td>
-                  <td><center><img src="../../assets/images/<?php echo $producto['url_foto']; ?>" alt="Productos del catalo de amora" width="200" height ="100"></center></td>
+                  <td><center><img loading = "lazy" src="../../assets/images/<?php echo $producto['url_foto']; ?>" alt="Productos del catalo de amora" width="200" height ="100"></center></td>
                   <td>
                     <a href="editar-productos.php?id=<?php echo $producto['id_pro']?>"
                       class="btn btn-warning btn-flat margin" title="Editar">
