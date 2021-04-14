@@ -1,0 +1,1151 @@
+/* Funte gotham */
+
+@font-face {
+    src: url("../assets/fonts/GothamLight.ttf");
+    font-family: "Gotham";
+}
+
+@font-face {
+    src: url("../assets/fonts/GothamBold.ttf");
+    font-family: "Gotham-Bold";
+}
+
+@font-face {
+    src: url("../assets/fonts/GothamMedium.ttf");
+    font-family: "Gotham-Med";
+}
+
+
+/* Estilos Globales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: "Gotham";
+    outline: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* Variables */
+
+$movil: 767px;
+$tabletH: 768px;
+$tabletV: 1024px;
+
+/*Navegacion */
+
+.contenido {
+    width: 100%;
+    .navegacion {
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        z-index: 100;
+        position: fixed;
+        margin-top: -10px;
+        padding: 15px 0;
+        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+        @media screen and (max-width: $movil) {
+            & {
+                width: 100%;
+                background: #fff;
+                justify-content: flex-end;
+                margin-top: -20px;
+            }
+        }
+        .enlaces {
+            display: flex;
+            margin-top: 35px;
+            @media screen and (max-width: $movil) {
+                & {
+                    position: fixed;
+                    width: 100vw;
+                    height: calc(100% -65px);
+                    background: #fff;
+                    top: -100vh;
+                    text-align: center;
+                    transition: all .4s;
+                    flex-direction: column;
+                }
+            }
+            a {
+                color: rgb(97, 95, 95);
+                font-family: "Gotham-Bold";
+                font-size: 18px;
+                font-weight: 900;
+                margin-right: 30px;
+                transition: all .4s ease-in-out;
+                text-transform: uppercase;
+                &:hover {
+                    color: #000;
+                }
+                @media screen and (min-width: $tabletH) and (max-width: $tabletV) {
+                    & {
+                        font-size: 16px;
+                    }
+                }
+                @media screen and (max-width: $movil) {
+                    & {
+                        margin: 50px 10px 0 0;
+                        line-height: 30px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        a.active {
+            font-weight: bold;
+            color: #000;
+        }
+        .menMov {
+            font-size: 2rem;
+            color: #000;
+            cursor: pointer;
+            display: none;
+            margin-top: 16px;
+            @media screen and (max-width: $movil) {
+                & {
+                    display: block;
+                    margin-right: 20px;
+                }
+            }
+        }
+        ul.show {
+            top: 34px;
+            width: 100%;
+            left: 0;
+            height: 100vh;
+        }
+    }
+}
+
+.itemsMov {
+    color: #000;
+    position: absolute;
+}
+
+#close {
+    display: none;
+}
+
+
+/*Fin Navegacion */
+
+.itemsMov {
+    color: #000;
+    position: absolute;
+}
+
+#close {
+    display: none;
+}
+
+
+/*Fin Navegacion */
+
+
+/* Header */
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @media screen and (max-width: $movil) {
+        & {
+            padding-top: 50px;
+            height: 400px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            height: 50vh;
+        }
+    }
+    @media screen and (min-width: $tabletH) and (max-width: $tabletV) {
+        & {
+            height: 45vh;
+        }
+    }
+    .logo,
+    .foto {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: $movil) {
+            & {
+                width: 100%;
+            }
+        }
+        @media screen and (min-width: $tabletH) and (max-width: $tabletV) {
+            & {
+                height: 300px;
+            }
+        }
+        .imgLogo {
+            width: 70%;
+            height: 70%;
+            background-image: url("../assets/img/blackwolf.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media screen and (max-width: $movil) {
+                & {
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+        }
+        .imgFoto {
+            width: 70%;
+            height: 70%;
+            background-image: url("../assets/img/collar1.jpg");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media screen and (max-width: $movil) {
+                & {
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+        }
+    }
+}
+
+
+/* Nosotros */
+
+.nosotros {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: $movil) {
+        & {
+            flex-wrap: wrap-reverse;
+            padding: 30px 0 0 0;
+            height: 900px;
+        }
+    }
+    @media screen and (min-width: $tabletH) and (max-width: $tabletV) {
+        & {
+            margin-top: -70px;
+        }
+    }
+    h2 {
+        color: #000;
+        font-size: 5rem;
+        font-family: "Gotham-Bold";
+        margin-bottom: 15px;
+        @media screen and (max-width: $movil) {
+            & {
+                margin: 30px 0;
+                font-size: 3rem;
+            }
+        }
+    }
+    p {
+        width: 50%;
+        color: #000;
+        font-size: 1rem;
+        margin-bottom: 40px;
+        @media screen and (max-width: $movil) {
+            & {
+                width: 90%;
+                text-align: center;
+            }
+        }
+        span {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+    a {
+        margin: 0 auto;
+        text-align: center;
+        width: 30%;
+        padding: 10px;
+        border: 2px solid #000;
+        font-size: 1.2rem;
+        font-family: "Gotham";
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+        transition: all .3s ease-in;
+        &:hover {
+            background: #000;
+            color: #fff;
+            transform: scale(1.03);
+        }
+        @media screen and (max-width: $movil) {
+            & {
+                padding: 5px;
+                font-size: 1.8rem;
+                width: 75%;
+            }
+        }
+    }
+}
+
+
+/* FIn Nosotros */
+
+.galeria {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    @media screen and (max-width: $movil) {
+        & {
+            margin-top: -17rem;
+            flex-direction: column;
+        }
+    }
+    .gal {
+        width: 500px;
+        height: 400px;
+        margin: 0 10px;
+        transition: all .3s ease-in;
+        &:hover {
+            transform: scale(1.03);
+        }
+        @media screen and (max-width: $movil) {
+            & {
+                width: inherit;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .galeria1 {
+        background-image: url("../assets/img/pulsera.jpg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media screen and (max-width: $movil) {
+            & {
+                background-size: cover;
+            }
+        }
+    }
+    .galeria2 {
+        background-image: url("../assets/img/collar2.jpg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media screen and (max-width: $movil) {
+            & {
+                background-size: cover;
+            }
+        }
+    }
+    .galeria3 {
+        background-image: url("../assets/img/anillo.jpg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media screen and (max-width: $movil) {
+            & {
+                background-size: cover;
+            }
+        }
+    }
+}
+
+
+/* grid */
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: $movil) {
+        & {
+            margin-top: -10rem;
+        }
+    }
+    h2 {
+        font-size: 3rem;
+        color: #000;
+        font-family: "Gotham-Bold";
+        letter-spacing: 10px;
+        margin-bottom: 20px;
+    }
+    .imagenes {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 25%;
+            height: 200;
+            transition: all .3s ease;
+            &:hover {
+                transform: scale(1.03);
+            }
+            @media screen and (max-width: $movil) {
+                & {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    a {
+        padding: 10px 80px;
+        border: 2px solid #000;
+        font-size: 1.4rem;
+        font-family: "Gotham-Med";
+        color: #000;
+        margin-top: 50px;
+        transition: all .4s ease;
+        &:hover {
+            transform: scale(1.04);
+            background: #000;
+            color: #fff;
+        }
+    }
+}
+
+
+/* Contacto */
+
+.contacto {
+    width: 100%;
+    height: 450px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: $movil) {
+        & {
+            flex-wrap: wrap;
+        }
+    }
+    .txtContacto {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (max-width: $movil) {
+            & {
+                width: 100%;
+            }
+        }
+        h2 {
+            color: #fff;
+            font-size: 4rem;
+            font-family: "Gotham-Bold";
+            padding-left: 30px;
+            text-transform: uppercase;
+            @media screen and (max-width: $movil) {
+                & {
+                    text-align: center;
+                    margin-top: -200px;
+                    font-size: 2.5rem;
+                    padding-left: 5px;
+                }
+            }
+            @media screen and (min-width: $tabletH) and (max-width: $tabletV) {
+                & {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+        .redes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .iconRed {
+                font-size: 2rem;
+                color: #fff;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+    .formulario {
+        width: 50%;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 40px;
+        background: #000;
+        @media screen and (max-width: $movil) {
+            & {
+                margin-top: -280px;
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
+        .correo a,
+        .telefono a {
+            display: flex;
+            .fa-envelope {
+                font-size: 2rem;
+                color: #fff;
+                margin: 7px 10px 0 0;
+            }
+            .fa-phone {
+                font-size: 1.8rem;
+                color: #fff;
+                margin: 8px 10px 0 0;
+            }
+            p {
+                font-size: 1.8rem;
+                color: #fff;
+                font-family: "Gotham-Med";
+                @media screen and (max-width: $movil) {
+                    & {
+                        font-size: 1.2rem;
+                        margin-top: 7px;
+                    }
+                }
+                @media screen and (min-width: $tabletH) and (max-width: $tabletV) {
+                    & {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        /*form {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            input {
+                padding: 20px 0 0 5px;
+                background: #000;
+                border: none;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #fff;
+                margin-bottom: 30px;
+                border-radius: 10px;
+                color: #fff;
+                font-family: "Gotham-Med";
+                &:hover {
+                    border-bottom: 2px solid #fff;
+                }
+            }
+            button {
+                width: 20%;
+                background: transparent;
+                color: #fff;
+                font-weight: bold;
+                font-size: 1.2rem;
+                border: 2px solid #fff;
+                padding: 10px 60px;
+                cursor: pointer;
+                transition: all .4s ease-in;
+                margin: 0 auto;
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }*/
+    }
+}
+
+
+/* Fin Contacto */
+
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: #fff;
+    @media screen and (max-width: $movil) {
+        & {
+            margin-top: 180px;
+        }
+    }
+    h2 {
+        color: #000;
+        font-size: 1.2rem;
+        @media screen and (max-width: $movil) {
+            & {
+                font-size: 1rem;
+            }
+        }
+        a,
+        span {
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+
+/* Fin Footer */
+
+
+/* Icono whatsap Flotante*/
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #000;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: #25d366;
+    }
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+
+/* Fin Icono whatsap Flotante*/
+
+
+/* Pagina para subir una img a la BD */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    h2 {
+        font-size: 3rem;
+        color: #000;
+        font-family: "Gotham-Bold";
+        text-transform: uppercase;
+    }
+    .contenido {
+        width: 70%;
+        padding: 30px;
+        background: #000;
+        box-shadow: 0 5px 10px #000;
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            label {
+                color: #fff;
+                font-size: 1.5rem;
+                font-family: "Gotham-Bold";
+                margin: 20px 0;
+            }
+            input {
+                width: 80%;
+                padding: 10px;
+                background: #000;
+                border: none;
+                border-bottom: 1px solid #fff;
+                border-radius: 10px;
+            }
+            input[type="file"] {
+                border: none;
+                color: #fff;
+            }
+            button {
+                padding: 10px 40px;
+                background: transparent;
+                border: 2px solid #fff;
+                color: #fff;
+                font-size: 1.2rem;
+                font-family: "Gotham-Med";
+                margin: 30px 0 0 0;
+                cursor: pointer;
+                transition: all .4s ease-in;
+                &:hover {
+                    background: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+/* Fin Pagina para subir una img a la BD */
+
+
+/* Pagina de gracias */
+
+.gracias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    h1 {
+        font-size: 3rem;
+        color: #000;
+        font-family: "Gotham-Bold";
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .cajaGracias {
+        width: 70%;
+        padding: 30px;
+        background: #000;
+        box-shadow: 0 5px 10px #000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @media screen and (max-width: $movil) {
+            & {
+                width: 80%;
+            }
+        }
+        h2 {
+            font-size: 3rem;
+            color: #fff;
+            font-family: "Gotham-Bold";
+            text-align: center;
+            @media screen and (max-width: $movil) {
+                & {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+        p {
+            text-align: center;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+        a {
+            margin-top: 2rem;
+            padding: 10px 40px;
+            border: 2px solid #fff;
+            font-size: 1.8rem;
+            color: #fff;
+            font-family: "Gotham-Bold";
+            transition: all .4s ease;
+            &:hover {
+                background: #fff;
+                color: #000;
+            }
+            @media screen and (max-width: $movil) {
+                & {
+                    padding: 10px 20px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* Fin Pagina de gracias */
+
+
+/*============================================
+Catalago amora
+============================================*/
+
+.cajaCategorias {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 8rem;
+    @media screen and (max-width: $movil) {
+        & {
+            padding-bottom: 0;
+        }
+    }
+    .titulo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            color: #000;
+            padding: 100px 0 20px 0;
+            font-size: 4rem;
+            font-family: "Gotham-Bold";
+            letter-spacing: 10px;
+            @media screen and (max-width: $movil) {
+                & {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+    /*============================================
+Categorias
+============================================*/
+    .categorias {
+        display: flex;
+        align-self: baseline;
+        margin-left: 35px;
+        @media screen and (max-width: $movil) {
+            & {
+                align-self: unset;
+                margin-left: 0;
+                margin-bottom: 15px;
+            }
+        }
+        select {
+            padding: 10px 10px 10px 5px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            color: #000;
+            font-size: 1.3rem;
+            font-family: "Gotham-Med";
+            cursor: pointer;
+            outline: none;
+            @media screen and (max-width: $movil) {
+                & {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        option {
+            font-family: "Gotham-Med";
+            @media screen and (max-width: $movil) {
+                & {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+    /*============================================
+ Imagenes
+============================================*/
+    @mixin siseImg {
+        width: 95%;
+        height: 95%;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        @media screen and (max-width: $movil) {
+            & {
+                width: 100%;
+            }
+        }
+    }
+    .anillos,
+    .brasaletes,
+    .collares {
+        width: 95%;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-left: .8rem;
+        .sizeImg {
+            @include siseImg();
+        }
+        .cajaImg {
+            display: flex;
+            flex-wrap: wrap;
+            .infoImg {
+                width: 33%;
+                height: 33%;
+                position: relative;
+                transition: all .2s ease-in-out;
+                @media screen and (max-width: $movil) {
+                    & {
+                        width: 100%;
+                    }
+                }
+                .ribbon {
+                    position: absolute;
+                    left: -5px;
+                    top: -5px;
+                    z-index: 1;
+                    overflow: hidden;
+                    width: 75px;
+                    height: 80px;
+                    text-align: right;
+                    padding: 10px 0;
+                }
+                .ribbon span {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #FFF;
+                    text-transform: uppercase;
+                    text-align: center;
+                    line-height: 20px;
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                    width: 100px;
+                    display: block;
+                    background: #ccc;
+                    background: linear-gradient(rgb(16, 15, 15) 0%, rgb(77, 74, 74) 100%);
+                    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+                    position: absolute;
+                    top: 19px;
+                    left: -21px;
+                }
+                .ribbon span::before {
+                    content: "";
+                    position: absolute;
+                    left: 0px;
+                    top: 100%;
+                    z-index: -1;
+                    border-left: 3px solid #000;
+                    border-right: 3px solid transparent;
+                    border-bottom: 3px solid transparent;
+                    border-top: 3px solid #000;
+                }
+                .ribbon span::after {
+                    content: "";
+                    position: absolute;
+                    right: 0px;
+                    top: 100%;
+                    z-index: -1;
+                    border-left: 3px solid transparent;
+                    border-right: 3px solid #000;
+                    border-bottom: 3px solid transparent;
+                    border-top: 3px solid #000;
+                }
+                &:hover {
+                    transform: scale(1.05);
+                }
+                p {
+                    font-size: 15px;
+                    color: #000;
+                    font-family: "Gotham-Med";
+                    text-transform: uppercase;
+                    margin: -15px 0 25px 0;
+                }
+            }
+        }
+        @media screen and (max-width: $movil) {
+            & {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.titulo {
+    color: #000;
+    font-size: 2rem;
+    font-family: "Gotham-Bold";
+    text-transform: uppercase;
+}
+
+
+/*============================================
+fin catalogo amora
+============================================*/
+
+
+/*============================================
+Pagina de administracion del catalogo
+============================================*/
+
+.admin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    h1 {
+        color: #000;
+        font-size: 2rem;
+        font-weight: "Gotham-Bold";
+        text-transform: uppercase;
+        @media screen and (max-width: $movil) {
+            & {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .opciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        @media screen and (max-width: $movil) {
+            & {
+                margin: 0;
+            }
+            .btnOpciones {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        h2 {
+            color: #000;
+            margin: 35px 0;
+        }
+        a {
+            margin-right: 15px;
+            padding: 10px;
+            border: 2px solid #000;
+            color: #fff;
+            background: #000;
+            font-family: "Gotham-Med";
+            cursor: pointer;
+            @media screen and (max-width: $movil) {
+                & {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .cajaInfo {
+        width: 90%;
+        display: flex;
+        background: #000;
+        padding: 15px;
+        display: none;
+        @media screen and (max-width: $movil) {
+            & {
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    fieldset {
+        border: 1px solid #fff;
+        padding: 10px 0 40px 15px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @media screen and (max-width: $movil) {
+            & {
+                padding: 10px 0 40px 0;
+            }
+        }
+    }
+    legend {
+        color: #fff;
+        font-family: "Gotham-Med";
+        text-transform: uppercase;
+    }
+    .cargarInfo {
+        width: 45%;
+        margin-right: 5rem;
+        @media screen and (max-width: $movil) {
+            & {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        input {
+            width: 90%;
+            background: transparent;
+            border: 1px solid #fff;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            padding: 10px;
+            outline: none;
+            color: #fff;
+            font-family: "Gotham-Med";
+            font-size: 1rem;
+            @media screen and (max-width: $movil) {
+                & {
+                    font-size: .9rem;
+                }
+            }
+        }
+        select {
+            width: 90%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            background: #000;
+            color: #fff;
+            font-family: "Gotham-Med";
+            margin-bottom: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            outline: none;
+        }
+        button {
+            width: 20%;
+            background: transparent;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 2px solid #fff;
+            padding: 10px 60px;
+            cursor: pointer;
+            transition: all .4s ease-in;
+            outline: none;
+            &:hover {
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+}
+
+.mostrarInfo {
+    width: 55%;
+    @media screen and (max-width: $movil) {
+        & {
+            width: 100%;
+        }
+    }
+    table {
+        background: #000;
+        width: 95%;
+        color: #fff;
+        @media screen and (max-width: $movil) {
+            & {
+                margin-left: 10px;
+            }
+        }
+    }
+    td {
+        color: #fff;
+        font-size: .9rem;
+        font-family: "Gotham-Med";
+        padding: 5px;
+    }
+    tr:nth-child(even) {
+        background: #000;
+    }
+    a {
+        font-size: 1.3rem;
+        color: #fff;
+        margin-right: 10px;
+    }
+}

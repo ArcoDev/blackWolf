@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <!-- CDN Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--CDN font awasome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Black Wolf</title>
+</head>
+
+<body>
+    <a href="https://wa.link/xgrfow" class="float" target="_blank">
+        <i class="fab fa-whatsapp my-float"></i>
+    </a>
+    <!--Navbar-->
+    <div id="contenido" class="contenido">
+        <nav id="nav" class="navegacion">
+            <div class="items">
+                <ul id="enlaces" class="enlaces" style="list-style: none;">
+                    <a class="active" onclick="return remover();" href="./index.html">
+                        <li>Inicio</li>
+                    </a>
+                    <a onclick="return remover();" href="#nosotros">
+                        <li>Nosotros</li>
+                    </a>
+                    <a onclick="return remover();" href="./includes/catalogo.php">
+                        <li>Catálogo</li>
+                    </a>
+                    <a onclick="return remover();" href="#contacto">
+                        <li>Contacto</li>
+                    </a>
+                </ul>
+                <i id="menMov" class="fas fa-bars menMov"></i>
+            </div>
+        </nav>
+    </div>
+    <div class="header">
+        <div class="logo">
+            <div class="imgLogo"></div>
+        </div>
+        <div class="foto">
+            <div class="imgFoto"></div>
+        </div>
+    </div>
+    <section id="nosotros" class="nosotros">
+        <h2>Nosotros</h2>
+        <p><span>Nos dedicamos a la venta de joyería</span> en plata con detalles artesanales trabajada con plata .925 ley y manos 100% mexicanas, apoyando la economía mexicana.</p>
+        <a href="./includes/catalogo.php">Catálogo</a>
+    </section>
+    <section class="grid">
+        <h2>Galería</h2>
+        <div class="imagenes">
+            <img loading="lazy" src="./assets/img/anillo.jpg" alt="Fotos de productos de blackwolf">
+            <img loading="lazy" src="./assets/img/collar1.jpg" alt="Fotos de productos de blackwolf">
+            <img loading="lazy" src="./assets/img/collar2.jpg" alt="Fotos de productos de blackwolf">
+            <img loading="lazy" src="./assets/img/pulsera.jpg" alt="Fotos de productos de blackwolf">
+            <img loading="lazy" src="./assets/img/FOTO1_1.png" alt="Fotos de productos de blackwolf">
+            <img loading="lazy" src="./assets/img/13.png" alt="Fotos de productos de blackwolf">
+            <img loading="lazy" src="./assets/img/24.png" alt="Fotos de productos de blackwolf">
+            <img loading="lazy" src="./assets/img/26.png" alt="Fotos de productos de blackwolf">
+
+        </div>
+        <a href="./includes/catalogo.php">Ver más</a>
+    </section>
+    <section id="contacto" class="contacto">
+        <div class="txtContacto">
+            <h2>Contáctanos</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/BlackWolfTrc/" target="_blank"><i
+                        class="fab fa-facebook iconRed"></i></a>
+                <a href="https://www.instagram.com/BlackWolfTrc/" target="_blank"><i
+                        class="fab fa-instagram iconRed"></i></a>
+            </div>
+        </div>
+        <div class="formulario">
+            <div class="correo">
+                <a href="mailto:contacto@blackwolftrc.com">
+                    <i class="far fa-envelope"></i>
+                    <p>contacto@blackwolftrc.com</p>
+                </a>
+            </div>
+            <div class="telefono">
+                <a href="tel:8711159321">
+                    <i class="fas fa-phone"></i>
+                    <p>871 115 9321</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <h2>Sitio Desarrollado por <a href="https://awsoftware.mx/" target="_blank"><span>A W Software</span></a></h2>
+    </footer>
+    <!--Feed de instagram-->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <!--Script Personal -->
+    <script src="./js/main.js"></script>
+    <!-- CDN Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
