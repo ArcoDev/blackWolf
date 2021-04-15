@@ -34,43 +34,26 @@ catalogo.php
 function filtroCategorias() {
     const seleccionarCat = document.getElementById("seleccionarCat");
     const opcionesCat = seleccionarCat.value;
-    const anillos = document.getElementById("anillos");
     const brasaletes = document.getElementById("brasaletes");
     const collares = document.getElementById("collares");
-    const txtAnillos = document.getElementById("txtAnillos");
     const txtBrasaletes = document.getElementById("txtBrasaletes");
     const txtCollares = document.getElementById("txtCollares");
 
 
     if (opcionesCat === "todos") {
-        anillos.style.display = "block";
         brasaletes.style.display = "block";
         collares.style.display = "block";
-        txtAnillos.style.display = "block";
         txtBrasaletes.style.display = "block";
         txtCollares.style.display = "block";
-        t
-    } else if (opcionesCat === "anillos") {
-        anillos.style.display = "block";
-        brasaletes.style.display = "none";
-        collares.style.display = "none";
-        txtAnillos.style.display = "block";
-        txtBrasaletes.style.display = "none";
-        txtCollares.style.display = "none";
-
     } else if (opcionesCat === "brasaletes") {
         brasaletes.style.display = "block";
-        anillos.style.display = "none";
         collares.style.display = "none";
-        txtAnillos.style.display = "none";
         txtBrasaletes.style.display = "block";
         txtCollares.style.display = "none";
 
     } else if (opcionesCat === "collares") {
         collares.style.display = "block";
-        anillos.style.display = "none";
         brasaletes.style.display = "none";
-        txtAnillos.style.display = "none";
         txtBrasaletes.style.display = "none";
         txtCollares.style.display = "block";
 

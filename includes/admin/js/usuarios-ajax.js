@@ -109,7 +109,7 @@ $(document).ready(function() {
                         'success'
                     )
                     setTimeout(function() {
-                        window.location.href = 'adminAmora.php';
+                        window.location.href = 'adminBlackWolf.php';
                     }, 1000);
                 } else {
                     swal(

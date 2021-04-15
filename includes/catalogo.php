@@ -2,11 +2,12 @@
 require "conexion.php";
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="application/x-apple-aspen-config; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
     <!-- CDN Bootstrap -->
@@ -48,27 +49,10 @@ require "conexion.php";
             <select id="seleccionarCat" onchange="filtroCategorias();">
                 <option>Selecciona una categoría</option>
                 <option value="todos">Todos</option>
-                <option value="anillos">Anillos</option>
                 <option value="brasaletes">Brasaletes</option>
                 <option value="collares">Collares</option>
             </select>
         </section>
-        <h2 id="txtAnillos" class="titulo">Anillos</h2>
-        <div id="anillos" class="anillos">
-        <?php
-            $consulta = $con->query("SELECT * FROM productos WHERE nombre_cat = 'anillos' "); ?>
-            <div class="cajaImg">
-            <?php 
-                while ($imagenes = mysqli_fetch_array($consulta)) { 
-                    echo  '<div class="infoImg">
-                              <img loading="lazy" class="sizeImg" title="' . $imagenes["nombre"] . '" src="../assets/images/' . $imagenes["url_foto"] . '" alt="imagenes de los productos de amora">
-                              <div class="ribbon"><span>'.$imagenes["precio"].'</span></div>
-                              <p>'.$imagenes["nombre"].'</p>
-                           </div>';
-                }?>
-            </div>
-        </div>
-
         <h2 id="txtBrasaletes" class="titulo">Brasaletes</h2>
 
         <div id="brasaletes" class="brasaletes">
