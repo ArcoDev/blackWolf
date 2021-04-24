@@ -14,6 +14,9 @@ $(document).ready(function() {
             processData: false,
             async: true,
             cache: false,
+            beforeSend: function() {
+                $('#loader').show();
+            },
             success: function(data) {
                 console.log(data);
                 var resultado = data;
@@ -23,6 +26,8 @@ $(document).ready(function() {
                         'Se agrego correctamente.',
                         'success'
                     );
+                    $('#loader').hide();
+                    $('#guardar-producto-archivo')[0].reset();
                 } else {
                     swal(
                         'Ooops!',

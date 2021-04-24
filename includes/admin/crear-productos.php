@@ -61,6 +61,10 @@
                   <input type="file" id="imagen-producto" name="archivo_imagen">
                   <p class="help-block">Agrega una imagen del producto</p>
                 </div>
+                <div id="loader" class="form-group" style="display: none;">
+                  <img src="../../assets/img/preloader.gif" alt="Cargando" style="margin: 10px 0 10px 20px;">
+                  <p>Espere un momento porfavor...</p>
+                </div>
                 <div class="box-footer">
                   <input type="hidden" name="registro" value="nuevo">
                   <button type="submit" class="btn btn-primary">Enviar</button>

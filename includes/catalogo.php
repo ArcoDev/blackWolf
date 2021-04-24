@@ -49,11 +49,11 @@ require "conexion.php";
             <select id="seleccionarCat" onchange="filtroCategorias();">
                 <option>Selecciona una categoría</option>
                 <option value="todos">Todos</option>
-                <option value="brasaletes">Brasaletes</option>
+                <option value="brasaletes">Brazaletes</option>
                 <option value="collares">Collares</option>
             </select>
         </section>
-        <h2 id="txtBrasaletes" class="titulo">Brasaletes</h2>
+        <h2 id="txtBrasaletes" class="titulo">Brazaletes</h2>
 
         <div id="brasaletes" class="brasaletes">
         <?php
