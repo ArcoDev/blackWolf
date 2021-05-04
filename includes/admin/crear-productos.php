@@ -31,11 +31,6 @@
             <!-- form start -->
             <form role="form" name="guardar-producto" id="guardar-producto-archivo" method="post" action="modelo-productos.php" enctype="multipart/form-data">
               <div class="box-body">
-                <!--<div class="form-group">
-                  <label for="foto">URL de la foto</label>
-                  <input autocomplete="off" type="text" class="form-control" id="foto" name="foto"
-                    placeholder="Ingresa la url de la foto, ejemplo: foto.png">
-                </div>-->
                 <div class="form-group">
                   <label for="nombre">Nombre</label>
                   <input autocomplete="off" type="text" class="form-control" id="nombre" name="nombre"
@@ -59,7 +54,11 @@
                 <div class="form-group">
                   <label for="imagen-producto">Foto</label>
                   <input type="file" id="imagen-producto" name="archivo_imagen">
-                  <p class="help-block">Agrega una imagen del producto</p>
+                  <div style = "display: flex; flex-wrap: wrap; justify-content: space-between: text-align: center; margin-top: 10px;">
+                    <p style ="width: 50%;" class="help-block">• Medida recomendada de la imagen: <strong>1920 x 1440</strong> </p>
+                    <p style ="width: 50%;" class="help-block">• Peso ideal de la imagen, menos de <strong>1 MB</strong> </p>
+                    <p style ="width: 100%;" class="help-block">• Extenciónes permitidas: <strong>jpg, png, svg</strong> </p>
+                  </div>
                 </div>
                 <div id="loader" class="form-group" style="display: none;">
                   <img src="../../assets/img/preloader.gif" alt="Cargando" style="margin: 10px 0 10px 20px;">

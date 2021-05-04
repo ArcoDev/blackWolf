@@ -22,7 +22,7 @@
   </section>
 
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-10">
       <!-- Main content -->
       <section class="content">
         <!-- Default box -->
@@ -54,9 +54,9 @@
                 <div class="form-group">
                   <select name="categoria" class="form-control">
                   <option value="">Selecciona una categoria</option>
-                    <option value="1">1.- Anillos</option>
-                    <option value="2">2.- Brasaletes</option>
-                    <option value="3">3.- Collares</option>
+                    <option value="anillos">1.- Anillos</option>
+                    <option value="brasaletes">2.- Brasaletes</option>
+                    <option value="collares">3.- Collares</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -67,11 +67,15 @@
                 <div class="form-group">
                   <label for="imagen-producto">Foto</label>
                   <input type="file" id="imagen-producto" name="archivo_imagen">
-                  <p class="help-block">Agrega una imagen del producto</p>
+                  <div style = "display: flex; flex-wrap: wrap; justify-content: space-between: text-align: center; margin-top: 10px;">
+                    <p style ="width: 50%;" class="help-block">• Medida recomendada de la imagen: <strong>1920 x 1440</strong> </p>
+                    <p style ="width: 50%;" class="help-block">• Peso ideal de la imagen, menos de <strong>1 MB</strong> </p>
+                    <p style ="width: 100%;" class="help-block">• Extenciónes permitidas: <strong>jpg, png, svg</strong> </p>
+                  </div>
                 </div> 
                 <div class="box-footer">
                   <input type="hidden" name="registro" value="actualizar">
-                  <input type="hidden" name="id_registro"  value="<?php echo $id ?>">
+                  <input type="hidden" name="id_registro"  value="<?php echo $producto['id_pro'] ?>">
                   <button type="submit" class="btn btn-primary">Actualizar</button>
                 </div>
             </form>
